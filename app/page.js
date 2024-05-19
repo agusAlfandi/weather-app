@@ -51,11 +51,11 @@ export default function Home() {
           src="https://images.unsplash.com/photo-1601134467661-3d775b999c8b?q=80&w=1550&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="https://images.unsplash.com/photo-1601134467661-3d775b999c8b?q=80&w=1550&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           layout="fill"
-          className="object-cover"
+          className="cover"
         />
 
         {/* search */}
-        <div className="relative flex justify-between items-center max-w-xl w-full m-auto pt-4 text-white z-10">
+        <div className="relative flex justify-between items-center md:max-w-xl w-full m-auto pt-4 text-white z-10 px-4">
           <form
             onSubmit={FetchWeather}
             className="flex justify-between items-center w-full m-auto p-3 bg-transparent border border-gray-300 text-white rounded-2xl"
@@ -63,7 +63,7 @@ export default function Home() {
             <div>
               <input
                 type="text"
-                className="bg-transparent border-none text-white focus: outline-none text-2xl placeholder-white"
+                className="bg-transparent border-none text-white focus: outline-none text-2xl placeholder-white md: max-w-56"
                 placeholder="Search city..."
                 onChange={(e) => setCity(e.target.value)}
               />

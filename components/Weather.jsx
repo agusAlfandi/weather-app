@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 
 const Weather = ({ data }) => {
-  console.log("🚀 ~ Weather ~ data:", data);
   const convert = (kelvin) => {
     return kelvin - 273.15;
   };
@@ -18,9 +17,11 @@ const Weather = ({ data }) => {
             width={100}
             height={100}
           />
-          <p className="text-2xl">{data.weather[0].main}</p>
+          <p className="text-2xl text-black">{data.weather[0].main}</p>
         </div>
-        <p className="text-9xl">{convert(data.main.temp).toFixed(0)}&#176;</p>
+        <p className="text-9xl  text-black">
+          {convert(data.main.temp).toFixed(0)}&#176;
+        </p>
       </div>
 
       {/* bottom */}
